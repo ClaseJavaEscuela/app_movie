@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_app/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,8 +13,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Home"),),
-      body: Center(child: Text("Home"),),
+      appBar: AppBar(title: Text("Movie App"),backgroundColor: Colors.white12,),
+      body: Column(
+        children: [
+          //TODO: swiper
+          CustomSwiper()
+          //TODO: now playing: ListView.Horizontal
+
+        ],
+      ),
     );
   }
 }
