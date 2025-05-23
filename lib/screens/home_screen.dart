@@ -13,14 +13,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Movie App"),backgroundColor: Colors.white12,),
-      body: Column(
-        children: [
-          //TODO: swiper
-          CustomSwiper()
-          //TODO: now playing: ListView.Horizontal
-
-        ],
+      appBar: AppBar(title: Text("Movie App"), backgroundColor: Colors.white12),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomSwiper(),
+            SizedBox(height: 20),
+            CustomListView(),
+            SizedBox(height: 20)
+          ],
+        ),
       ),
     );
   }

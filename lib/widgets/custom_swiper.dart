@@ -1,6 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_app/widgets/custom_card_image.dart';
 
 class CustomSwiper extends StatelessWidget {
   const CustomSwiper({super.key});
@@ -12,23 +13,18 @@ class CustomSwiper extends StatelessWidget {
 
     return Container(
       width: double.infinity,
+      color: Colors.transparent,
       height: heightResponsive,
       child: Swiper(
         itemBuilder: (context, index) {
-          return Container(
-            width: double.infinity,
-            height: double.infinity,
-            color: Colors.white24,
-            child: FadeInImage(
-              placeholder: AssetImage('assets/images/images.png'),
-              image: NetworkImage("https://picsum.photos/200/300.jpg"),
-            ),
-          );
+          return CustomCardImage();
         },
         itemCount: 10,
+        itemWidth: 500,
         autoplay: true,
-        pagination: SwiperPagination(),
-        control: SwiperControl(),
+
+        control: SwiperControl(color: Colors.white),
+        layout: SwiperLayout.STACK,
       ),
     );
   }
