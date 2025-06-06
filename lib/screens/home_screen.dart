@@ -21,7 +21,11 @@ class _HomeScreenState extends State<HomeScreen> {
             CustomSwiper(),
             SizedBox(height: 20),
             CustomListView(),
-            SizedBox(height: 20)
+            SizedBox(height: 20),
+            CustomListView(),
+            SizedBox(height: 20),
+            CustomListView(),
+            SizedBox(height: 20),
           ],
         ),
       ),

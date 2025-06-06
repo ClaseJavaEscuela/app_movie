@@ -16,6 +16,7 @@ class CustomSwiper extends StatelessWidget {
       color: Colors.transparent,
       height: heightResponsive,
       child: Swiper(
+        onTap: (index)=>Navigator.pushNamed(context, 'details',arguments: 'la_pelicula $index'),
         itemBuilder: (context, index) {
           return CustomCardImage();
         },
